@@ -1,9 +1,26 @@
 import { Buffer } from 'buffer';
+import { readFileSync, writeFile } from 'fs';
 
 class DataBase {
     storage: Buffer;
     constructor() {
-        this.storage = Buffer.from(JSON.stringify({}));
+        let savedData = JSON.stringify({});
+        try {
+            const data = readFileSync('./src/save.json');
+            savedData = !!data.toString() ? data.toString() : JSON.stringify({});
+        } catch (e) {
+
+        }
+        this.storage = Buffer.from(savedData);
+    }
+
+    #backUpToFile(data: string) {
+        writeFile('./src/save.json', data, (err) => {
+            if (err) {
+                console.error(err)
+            }
+        })
+
     }
 
     #getStorageSize() {
@@ -36,6 +53,8 @@ class DataBase {
     #writeToStore(data: string) {
         try {
             const dataLength = this.#getIncomingDataSize(data);
+
+            this.#backUpToFile(data)
 
             if (dataLength > this.#getStorageSize()) {
                 this.storage = Buffer.from(data)
@@ -112,6 +131,7 @@ class DataBase {
                 ...parsedBufferData,
                 [newRecordId]: data
             })
+
             const result = this.#writeToStore(dataToStore) ? newRecordId : null;
 
             return result;

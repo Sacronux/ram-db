@@ -25,6 +25,8 @@ const testInsert = () => {
     const db = new DataBase();
 
     db.insert(34)
+    
+    console.log(db.bulkGetForTesting())
 
     console.log(db.findById(1))
 
