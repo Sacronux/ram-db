@@ -28,7 +28,7 @@
   "typeRoots": ["node_modules/@types"],
   "include": [
     "src/**/*"
-  ],
+, "logs/test.ts"  ],
   "exclude": [
     "node_modules",
   ]

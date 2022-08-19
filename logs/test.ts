@@ -1,5 +1,5 @@
 import { writeFileSync } from "fs";
-import { DataBase } from "./index";
+import { DataBase } from "../src/index";
 
 
 
