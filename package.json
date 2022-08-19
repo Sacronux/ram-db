@@ -1,0 +1,21 @@
+{
+  "name": "ram-db",
+  "version": "1.0.0",
+  "description": "Pure Node.js RAM database",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/ts-node src/test.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4",
+    "typescript-eslint": "^0.0.1-alpha.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.6"
+  }
+}

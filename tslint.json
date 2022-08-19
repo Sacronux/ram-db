@@ -1,0 +1,29 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "jsRules": {
+    "no-console": {
+      "severity": "off"
+    }
+  },
+  "rules": {
+    "no-trailing-whitespace": [false],
+    "no-unused-expression": [false],
+    "trailing-comma": [
+      false
+    ],
+    "variable-name": [
+      true,
+      "check-format",
+      "allow-pascal-case",
+      "allow-leading-underscore",
+      "allow-snake-case"
+    ],
+    "no-console": {
+      "severity": "off"
+    }
+  },
+  "rulesDirectory": []
+}

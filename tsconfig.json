@@ -1,0 +1,35 @@
+{
+  "ts-node": {
+    "files": true
+  },
+  "esModuleInterop": true,
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "target": "esnext",
+
+    "types": [
+      "node",
+    ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": true,
+    "noImplicitUseStrict": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "baseUrl": "./src",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types",
+    ],
+    "allowSyntheticDefaultImports": true
+  },
+  "typeRoots": ["node_modules/@types"],
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+  ]
+}
